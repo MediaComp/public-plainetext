@@ -42,11 +42,11 @@ jobs:
 
       - name: Deploy theme
         env:
-          DEPLOY_HOST: ${{ secrets.DEPLOY_HOST }}
-          DEPLOY_PORT: ${{ secrets.DEPLOY_PORT }}
-          DEPLOY_USER: ${{ secrets.DEPLOY_USER }}
-          LFTP_PASSWORD: ${{ secrets.DEPLOY_PASSWORD }}
-          DEPLOY_PATH: ${{ vars.DEPLOY_PATH }}
+          DEPLOY_HOST: awesome-site.sftp.wpengine.com
+          DEPLOY_PORT: 2222
+          DEPLOY_USER: awesome-site-dev
+          LFTP_PASSWORD: Awesome-Pass-123
+          DEPLOY_PATH: /wp-content/themes/awesome-theme
         run: |
           set -euo pipefail
 
